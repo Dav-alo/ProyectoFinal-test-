@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        p,
+        h1,
+        li {
+            color: white;
+        }
+
+        p.Registro {
+            text-indent: 40px;
+        }
+
+        .divider {
+            width: 5px;
+            height: auto;
+            display: inline-block;
+        }
+
+        .btn-default {
+            color: white;
+        }
+
+        .nav-link {
+            background-color: none;
+            color: white;
+        }
+
+        body {
+            background-color: black;
+            background-image: url("Images/d_d.jpg");
+            background-repeat: no-repeat;
+            background-size: 1950px 900px;
+
+        }
+
+        .jumbotron {
+            background: none
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: gray;
+            color: white;
+            text-align: center;
+        }
+
+        .right {
+            margin-left: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--INICIO DE MODAL DE HOME Y REGISTRO -->
+    <nav class="navbar navbar-dark bg-dark">
+        <!-- Navbar content -->
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Estadisticas_de_personaje.html">Character Administration</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="nosotros.html"> Us </a>
+            </li>
+        </ul>
+        <!-- Modal -->
+        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="form-group">
+                                <label for="">Correo</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i
+                                                class="fas fa-user    "></i></span>
+                                    </div>
+                                    <input type="text" class="col-10 form-control" name="" id="userInputLogin"
+                                        aria-describedby="helpId" placeholder="correo registrado" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i
+                                                class="fas fa-key    "></i></span>
+                                    </div>
+                                    <input type="password" class="col-10 form-control" name="" id="passwordInputLogin"
+                                        aria-describedby="helpId" placeholder="correo registrado" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Respuesta:</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend" id="loginResponseMSG">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="controls">
+                                    <button id="loginBtn" type="button" class="btn btn-success">Login</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12 control">
+                                    <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+                                        No tienes cuenta!
+                                        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#registro">
+                                            Registrate aquí
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#createFormModal">
+            Registrar usuario
+
+        </button>
+        <button>
+            <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#modelId">Login</a>
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="createFormModal" tabindex="-1" role="dialog" aria-labelledby="createFormModal"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="createFormModal">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form method="POST" id="createUserForm">
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="text" name="nombre" id="" class="form-control"
+                                        placeholder="Nombre o nombres" aria-describedby="helpId" required>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" name="apellidos" id="" class="form-control"
+                                        placeholder="Apellidos" aria-describedby="helpId" required>
+                                </div>
+                            </div>
+                            <input type="email" name="email" id="" class="form-control mt-3" placeholder="Correo"
+                                aria-describedby="helpId" required>
+                            <input type="password" name="password1" id="password1" class="form-control mt-3"
+                                placeholder="Contraseña" aria-describedby="helpId" required>
+                            <input type="password" name="password2" id="password2" class="form-control mt-3"
+                                placeholder="Confirmar contraseña" aria-describedby="helpId" required>
+                            <input type="date" class="form-control mt-3" value="2000-01-01" name="fecha" id="">
+
+                            <div class="radioB mt-3 border">
+                                <div class="form-check">
+                                    <label class="form-check-label ml-3">
+                                        <input type="radio" class="form-check-input sexoF" name="sexo" id="" value="M"
+                                            checked>
+                                        Mujer
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label ml-3">
+                                        <input type="radio" class="form-check-input sexoM" name="sexo" id="" value="H">
+                                        Hombre
+                                    </label>
+                                </div>
+                            </div>
+                            <input type="url" name="image" id="" class="form-control mt-3"
+                                placeholder="Url de imagen de perfil" aria-describedby="helpId">
+
+                            <div id="responseMSG"></div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" id="createUserBtn" class="btn btn-success "
+                                    disabled>Guardar</button>
+                                <br>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </nav>
+
+    <div class="jumbotron">
+        <h1 class="display-4">D & D </h1>
+        <p class="lead">Escoge tu personaje de Dungeons and Dragons con Bases prediseñadas</p>
+        <hr class="my-4">
+        <p>
+            <ul>
+                <li>Login</li>
+                <li>Registro</li>
+                <li>Consulta de Personaje</li>
+            </ul>
+        </p>
+        <a class="btn btn-primary btn-lg" href="Escoger_raza.html" role="button">Ir a Creacion de Personajes</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="#"> F&D Consulting</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/8063d9ff98.js" crossorigin="anonymous"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/index.js"></script> 
+</body>
+
+</html>

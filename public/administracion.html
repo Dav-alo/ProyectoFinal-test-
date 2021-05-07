@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de datos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        p,
+        h1,
+        li {
+            color: white;
+        }
+
+        p.Registro {
+            text-indent: 40px;
+        }
+
+        .divider {
+            width: 5px;
+            height: auto;
+            display: inline-block;
+        }
+
+        .btn-default {
+            color: white;
+        }
+
+        .nav-link {
+            background-color: none;
+            color: white;
+        }
+
+        body {
+            background-color: black;
+            background-image: url("Images/Base_de_datos.jpg");
+            background-repeat: no-repeat;
+            background-size: 1950px 900px;
+
+        }
+
+        .jumbotron {
+            background: none
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: gray;
+            color: white;
+            text-align: center;
+        }
+
+        .right {
+            margin-left: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--INICIO DE MODAL DE HOME Y REGISTRO -->
+    <nav class="navbar navbar-dark bg-dark">
+        <!-- Navbar content -->
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Estadisticas_de_personaje.html">Character Administration</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="nosotros.html"> Us </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <!-- Button trigger modal REGISTRO -->
+            <li class="nav-item" id="right">
+                <a class="nav-link" href="RegisterPage.html">
+                    Register
+                </a>
+            </li>
+            <li class="nav-item" id="right">
+                <!-- Button trigger modal -->
+                <a class="nav-link" href="LoginPage.html">
+                    Login
+                </a>
+        </ul>
+
+    </nav>
+    <!-- Modal FOR lOGIN  -->
+    <div class="modal fade" id="login" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true" data-target="#login" id="#login"
+        aria-labelledby="#login">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form class="form-signin">
+
+
+                        <p>Correo</p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electronico"
+                                required autofocus>
+                        </div>
+                        <p>Password</p>
+                        <label for="inputPassword" class="sr-only">Contraseña</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña"
+                                required>
+                        </div>
+
+                        <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="submit">Sign in</button>
+
+                </div>
+                <p class="Registro">No tienes cuenta? <a href="#registro" data-toggle="modal" data-target="#registro"
+                        data-dismiss="modal">Registrate aqui! </a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Modal FOR Registro -->
+    <div class="modal fade" id="registro" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Registrar Usuarios</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="signup-form">
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-6"><input type="text" class="form-control" name="first_name"
+                                            placeholder="Nombre o Nombres" required="required"></div>
+                                    <div class="col-6"><input type="text" class="form-control" name="last_name"
+                                            placeholder="Apellido" required="required"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" placeholder="Email"
+                                    required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password" placeholder="Contraseña"
+                                    required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="confirm_password"
+                                    placeholder="Confirmar Contraseña" required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="date" class="form-control" name="birthdate" placeholder="01/01/2000"
+                                    required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" id="sexo" name="sexo" value="Hombre">
+                                <label for="sexo">Hombre</label><br>
+                                <input type="radio" id="sexo1" name="sexo" value="Mujer">
+                                <label for="sexo1">Mujer</label><br>
+                            </div>
+
+
+                            <div class="form-group">
+                                <input type="url" class="form-control" name="URL" placeholder="Url de tu imagen"
+                                    required="required">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
+                            </div>
+                        </form>
+                        <div class="text-center">Ya tienes una cuenta? <a data-toogle="modal" href="#login"
+                                data-toggle="modal" data-target="#login" data-dismiss="modal">Login</a></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FINAL DE MODAL DE HOME Y REGISTRO -->
+    <div class="container">
+
+        <div class="row mt-3" style="background-color: gray;">
+            <div class="col-6">
+                <div class="form-group">
+                    <input type="text" name="" id="filterInput" class="form-control"
+                        placeholder="nombre de usuario a buscar" aria-describedby="helpId">
+                    <small id="helpId" class="text-muted">
+                        <t style="color: black;">Buscar usuario</t>
+                    </small>
+                </div>
+            </div>
+            <div class="col-4">
+            </div>
+        </div>
+
+
+
+        <div class="row  mt-4" id="lista" style="background-color: gray;">
+            <div class="media col-8 mt-2" id="modelo">
+                <div class="media-left align-self-center mr-3">
+                    <img class="rounded-circle" style="width: 320px; height: 320px;" src="Images/Fighter.png">
+                </div>
+                <div class="media-body">
+                    <h4>John Monster Doe</h4>
+                    <p>Experiencia: 123</p>
+                    <p>Nivel: 1 </p>
+                    <p>Iniciativa: Monster </p>
+                    <p>Fuerza : 1 </p>
+                    <p>consitucion : 1</p>
+                    <p>dexteridad : 1</p>
+                    <p>Inteligencia : 1 </p>
+                    <p>sabiduria : 1</p>
+                    <p>Carisma : 1</p>
+                    <p> Vida maxima : 1</p>
+                    <p>Velocidad : 1</p>
+                </div>
+                <div class="media-right align-self-center">
+                    <div class="row">
+                        <a href="#" class="btn btn-primary edit"><i class="fas fa-search edit  "></i></a>
+                    </div>
+                    <div class="row">
+                        <a href="#" class="btn btn-primary mt-2"><i class="fas fa-pencil-alt edit  "></i></a>
+                    </div>
+                    <div class="row">
+                        <a href="#" class="btn btn-primary mt-2"><i class="fas fa-trash-alt  remove "></i></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
+            <footer class="page-footer font-small blue">
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> no des click aqui !!!!!</a>
+                </div>
+                <!-- Copyright -->
+
+            </footer>
+            <!-- Footer -->
+
+
+
+            <nav class="row mt-3 " aria-label="Page navigation">
+                <ul class="pagination" id="pagesList">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item active "><a class="page-link  " href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="deleteFormModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Eliminar usuario</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3 class=text-danger>¿Esta seguro?</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal"
+                            onclick="deleteUser(this)">Delete
+                            user</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="updateFormModal" tabindex="-1" role="dialog" aria-labelledby="updateFormModal"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="updateFormModal">Editar usuario</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form action="">
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="text" name="nombre" id="" class="form-control"
+                                        placeholder="Nombre o nombres" aria-describedby="helpId" required>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" name="apellidos" id="" class="form-control"
+                                        placeholder="Apellidos" aria-describedby="helpId" required>
+                                </div>
+                            </div>
+                            <input type="password" name="password1" id="" class="form-control mt-3"
+                                placeholder="Contraseña" aria-describedby="helpId" required>
+                            <input type="password" name="password2" id="" class="form-control mt-3"
+                                placeholder="Confirmar contraseña" aria-describedby="helpId" required>
+                            <input type="date" class="form-control mt-3" placeholder="YYYY-MM-DD" name="fecha" id="">
+
+                            <input type="url" name="image" id="" class="form-control mt-3"
+                                placeholder="Url de imagen de perfil" aria-describedby="helpId">
+
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success" data-dismiss="modal"
+                            onclick="updateUser(this)">Actualizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="page-footer font-small blue">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="#"> F&D Consulting</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+        </script>
+        <script src="https://kit.fontawesome.com/8063d9ff98.js" crossorigin="anonymous"></script>
+        <script src="js/functions.js"></script>
+        <script src="js/consulta.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+    <style>
+        p,
+        h1,
+        li {
+            color: black;
+        }
+
+        p.Registro {
+            text-indent: 40px;
+        }
+
+        .divider {
+            width: 5px;
+            height: auto;
+            display: inline-block;
+        }
+
+        .btn-default {
+            color: white;
+        }
+
+        .nav-link {
+            background-color: none;
+            color: white;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        .jumbotron {
+            background: none
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: gray;
+            color: white;
+            text-align: center;
+        }
+
+        .right {
+            margin-left: auto;
+        }
+
+        .themed-container {
+            /*padding: 15px;
+            background-image: url("img/fondo_clases.jpg");*/
+            /*padding: 15px;
+            margin-bottom: 30px;
+            background-color: rgba(0, 123, 255, .15);
+            border: 1px solid rgba(0, 123, 255, .2);*/
+            text-align: center;
+            background-size: cover;
+            color: black;
+            padding-bottom: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--INICIO DE MODAL DE HOME Y REGISTRO -->
+    <nav class="navbar navbar-dark bg-dark">
+        <!-- Navbar content -->
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Estadisticas_de_personaje.html">Character Administration</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="nosotros.html"> Us </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid themed-container">
+        <div class="table-responsive">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <div class="container-fluid">
+                            <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
+                            <a class="btn btn-dark" href="index.html" role="button">X</a>
+                        </div>
+                    </tr>
+                    <tr>
+                        <form class="form-signin">
+                            <p>Correo</p>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electronico"
+                                    required autofocus>
+                            </div>
+                            <p>Password</p>
+                            <label for="inputPassword" class="sr-only">Contraseña</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña"
+                                    required>
+                            </div>
+    
+                            <div class="checkbox mb-3">
+                                <label>
+                                    <input type="checkbox" value="remember-me"> Remember me
+                                </label>
+                            </div>
+                        </form>
+
+                        <div class="form-group">
+                            <label for="password">Respuesta:</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend" id="loginResponseMSG">
+                                </div>
+                            </div>
+                        </div>
+                    </tr>
+                    <tr>
+                        <a class="btn btn-dark" href="index.html" role="button">X</a>
+                        <button id="loginBtn" class="btn btn-primary" type="submit">Sign in</button>
+                    </tr>
+                </tbody>
+                <p class="Registro">No tienes cuenta? <a href="RegisterPage.html" role="button">Registrate aquí!</a></p>
+            </table>
+        </div>
+    </div>
+    
+        <!-- Footer -->
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="#"> F&D Consulting</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/8063d9ff98.js" crossorigin="anonymous"></script>
+    <script src="js/LoginPage.js"></script>
+    <script>
+        eventsHandlers();
+    </script>
+</body>
+</html>
